@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class calculator {
+
+	public static void main(String[] args) {
+		int n1,n2,n3;
+		char op;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the numbers");
+		n1=sc.nextInt();
+		n2=sc.nextInt();
+		System.out.println("Enter the operator(+,-,*,/)");
+	    op=sc.next().charAt(0);
+		
+		switch(op)
+		{
+		case '+':
+			n3=n1+n2;
+			break;
+		case '-':
+			n3=n1-n2;
+			break;
+		case '*':
+			n3=n1*n2;
+			break;
+		case'/':
+			n3=n1/n2;
+			break;
+			default:
+				System.out.println("Enter Correct Operator");
+				return;
+		}
+		System.out.println("The result is");
+		System.out.println();
+		System.out.println(n1 + "" +op +""+n2+ "=" +n3);
+	}
+}
